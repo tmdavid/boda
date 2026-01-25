@@ -1,68 +1,49 @@
 .root {
-    min-height: 50vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
+  min-height: 60vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 80px 24px;
 }
 
 .root h1 {
-    font-size: 72px;
-    font-weight: normal;
+  font-family: var(--standard-header);
+  font-size: 120px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--wedding-coral);
+  margin: 0;
 }
 
 .root h2 {
-    font-size: 32px;
-    font-weight: normal;
+  font-family: var(--standard-header);
+  font-size: 32px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--standard-black);
 }
 
 .root p {
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.searchContainer {
-    display: flex;
-    gap: 16px;
-}
-
-.searchContainer > div {
-    width: 100%;
-}
-
-.searchContainer input {
-    height: 52px;
-}
-
-.searchContainer > button {
-    align-self: flex-start;
-    width: 350px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--wedding-text);
+  margin-bottom: 16px;
 }
 
 @media (max-width: 600px) {
+  .root {
+    padding: 60px 16px;
+    min-height: 50vh;
+  }
 
-    .root {
-        padding: 40px 0px;
-        min-height: unset;
-        gap: 16px;
-    }
+  .root h1 {
+    font-size: 80px;
+  }
 
-    .root h1 {
-        font-size: 42px;
-    }
-
-    .root h2 {
-        font-size: 24px;
-    }
-
-    .searchContainer {
-        flex-direction: column;
-        gap: 0px;
-    }
-
-    .searchContainer > button {
-        width: 100%;
-    }
-    
+  .root h2 {
+    font-size: 24px;
+  }
 }

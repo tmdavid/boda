@@ -1,43 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './404.module.css';
 
 import Button from '../components/Button';
 import Container from '../components/Container';
-import FormInputField from '../components/FormInputField/FormInputField';
 import Layout from '../components/Layout';
 
-const NotFoundPage = () => {
-  const [search, setSearch] = useState('');
+import { useLanguage } from '../context/LanguageProvider';
+import { getTranslation } from '../helpers/translations';
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate(`/search?q=${search}`);
-  };
+const NotFoundPage = () => {
+  const { language } = useLanguage();
+  const t = (key) => getTranslation(language, key);
 
   return (
     <Layout disablePaddingBottom>
       <Container size={'medium'}>
         <div className={styles.root}>
-          <h1>404 Error</h1>
-          <h2>Page not found</h2>
+          <h1>404</h1>
+          <h2>{language === 'ca' ? 'Pàgina no trobada' : 'Página no encontrada'}</h2>
           <p>
-            Uh oh, looks like the page you are looking for has moved or no
-            longer exists.
+            {language === 'ca'
+              ? 'Sembla que t\'has perdut pel camí cap al casament.'
+              : 'Parece que te has perdido de camino a la boda.'}
           </p>
-          <form onSubmit={(e) => handleSubmit(e)}>
-            <div className={styles.searchContainer}>
-              <FormInputField
-                id={'name'}
-                value={search}
-                handleChange={(_, e) => setSearch(e)}
-                type={'text'}
-              />
-              <Button type={'submit'} level={'primary'}>
-                search
-              </Button>
-            </div>
-          </form>
+          <Button level={'primary'} onClick={() => navigate('/')}>
+            {language === 'ca' ? 'Torna a l\'inici' : 'Volver al inicio'}
+          </Button>
         </div>
       </Container>
     </Layout>

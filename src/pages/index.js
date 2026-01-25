@@ -1,146 +1,105 @@
-import * as React from 'react';
+import React from 'react';
 
-import AttributeGrid from '../components/AttributeGrid';
+import { useLanguage } from '../context/LanguageProvider';
+import { getTranslation } from '../helpers/translations';
+
+import Button from '../components/Button';
 import Container from '../components/Container';
-import Hero from '../components/Hero';
-import BlogPreviewGrid from '../components/BlogPreviewGrid';
-import Highlight from '../components/Highlight';
 import Layout from '../components/Layout/Layout';
-import ProductCollectionGrid from '../components/ProductCollectionGrid';
-import ProductCardGrid from '../components/ProductCardGrid';
-import Quote from '../components/Quote';
-import Title from '../components/Title';
-
-import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 
 import * as styles from './index.module.css';
-import { Link, navigate } from 'gatsby';
-import { toOptimizedImage } from '../helpers/general';
 
 const IndexPage = () => {
-  const newArrivals = generateMockProductData(3, 'shirt');
-  const blogData = generateMockBlogData(3);
+  const { language } = useLanguage();
+  const t = (key) => getTranslation(language, key);
 
-  const goToShop = () => {
-    navigate('/shop');
-  };
+  const googleFormsUrl = 'https://forms.gle/vTdj9iuPoZDH8rnTA';
 
   return (
     <Layout disablePaddingBottom>
-      {/* Hero Container */}
-      <Hero
-        maxWidth={'500px'}
-        image={'/banner1.png'}
-        title={'Essentials for a cold winter'}
-        subtitle={'Discover Autumn Winter 2021'}
-        ctaText={'shop now'}
-        ctaAction={goToShop}
-      />
+      {/* Section 1: Hero */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <img
+            src="/banner.png"
+            alt="Gran Hotel La Florida illustration"
+            className={styles.heroBanner}
+          />
+          <span className={styles.saveTheDate}>{t('saveTheDate')}</span>
+          <h1 className={styles.heroNames}>{t('names')}</h1>
+          <span className={styles.heroTagline}>{t('tagline')}</span>
+          <Button
+            className={styles.heroCta}
+            level={'primary'}
+            onClick={() => window.open(googleFormsUrl, '_blank')}
+          >
+            {t('ctaButton')}
+          </Button>
+        </div>
+      </section>
 
-      {/* Message Container */}
-      <div className={styles.messageContainer}>
-        <p>
-          This is a demonstration of the Sydney theme for verse by{' '}
-          <span className={styles.gold}>matter design.</span>
-        </p>
-        <p>
-          wear by <span className={styles.gold}>sunspel</span> and{' '}
-          <span className={styles.gold}>scotch&soda</span>
-        </p>
-      </div>
-
-      {/* Collection Container */}
-      <div className={styles.collectionContainer}>
-        <Container size={'large'}>
-          <Title name={'New Collection'} />
-          <ProductCollectionGrid />
-        </Container>
-      </div>
-
-      {/* New Arrivals */}
-      <div className={styles.newArrivalsContainer}>
+      {/* Section 2: When & Where */}
+      <section id="when-where" className={styles.whenWhereSection}>
         <Container>
-          <Title name={'New Arrivals'} link={'/shop'} textLink={'view all'} />
-          <ProductCardGrid
-            spacing={true}
-            showSlider
-            height={480}
-            columns={3}
-            data={newArrivals}
-          />
+          <div className={styles.whenWhereGrid}>
+            <div className={styles.whenColumn}>
+              <h2 className={styles.sectionTitle}>{t('whenTitle')}</h2>
+              <div className={styles.scheduleItem}>
+                <span className={styles.scheduleLabel}>{t('outdoor')}</span>
+                <span className={styles.scheduleTime}>{t('outdoorTime')}</span>
+              </div>
+              <div className={styles.scheduleItem}>
+                <span className={styles.scheduleLabel}>{t('indoor')}</span>
+                <span className={styles.scheduleTime}>{t('indoorTime')}</span>
+              </div>
+            </div>
+            <div className={styles.whereColumn}>
+              <h2 className={styles.sectionTitle}>{t('whereTitle')}</h2>
+              <span className={styles.venueName}>{t('venueName')}</span>
+              <span className={styles.venueAddress}>{t('venueAddress')}</span>
+            </div>
+          </div>
         </Container>
-      </div>
+      </section>
 
-      {/* Highlight  */}
-      <div className={styles.highlightContainer}>
-        <Container size={'large'} fullMobile>
-          <Highlight
-            image={'/highlight.png'}
-            altImage={'highlight image'}
-            miniImage={'/highlightmin.png'}
-            miniImageAlt={'mini highlight image'}
-            title={'Luxury Knitwear'}
-            description={`This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife`}
-            textLink={'shop now'}
-            link={'/shop'}
-          />
+      {/* Section 3: Invitation */}
+      <section className={styles.invitationSection}>
+        <Container>
+          <div className={styles.invitationContent}>
+            <span className={styles.invitationSubtitle}>{t('subtitle')}</span>
+            <p className={styles.invitationText}>{t('invitationText')}</p>
+            <span className={styles.dressCode}>{t('dressCode')}</span>
+          </div>
         </Container>
-      </div>
+      </section>
 
-      {/* Promotion */}
-      <div className={styles.promotionContainer}>
-        <Hero image={toOptimizedImage('/banner2.png')} title={`-50% off \n All Essentials`} />
-        <div className={styles.linkContainers}>
-          <Link to={'/shop'}>WOMAN</Link>
-          <Link to={'/shop'}>MAN</Link>
+      {/* Section 4: Photo Gallery */}
+      <section className={styles.gallerySection}>
+        <div className={styles.galleryGrid}>
+          <img src="/fotos/cascada.jpg" alt="Sofia i David" />
+          <img src="/fotos/islandia.jpg" alt="Sofia i David" />
+          <img src="/fotos/caracas.jpg" alt="Sofia i David" />
+          <img src="/fotos/humboldt.jpg" alt="Sofia i David" />
+          <img src="/fotos/washingtonss.jpg" alt="Sofia i David" />
+          <img src="/fotos/freeeed.jpg" alt="Sofia i David" />
         </div>
-      </div>
+      </section>
 
-      {/* Quote */}
-      <Quote
-        bgColor={'var(--standard-light-grey)'}
-        title={'about Sydney'}
-        quote={
-          '“We believe in two things: the pursuit of quality in everything we do, and looking after one another. Everything else should take care of itself.”'
-        }
-      />
-
-      {/* Blog Grid */}
-      <div className={styles.blogsContainer}>
-        <Container size={'large'}>
-          <Title name={'Journal'} subtitle={'Notes on life and style'} />
-          <BlogPreviewGrid data={blogData} />
+      {/* Section 5: RSVP CTA */}
+      <section id="rsvp" className={styles.rsvpCtaSection}>
+        <Container>
+          <div className={styles.rsvpCtaContent}>
+            <h2 className={styles.rsvpCtaTitle}>{t('rsvpTitle')}</h2>
+            <p className={styles.rsvpCtaSubtitle}>{t('rsvpSubtitle')}</p>
+            <Button
+              level={'primary'}
+              onClick={() => window.open(googleFormsUrl, '_blank')}
+            >
+              {t('rsvpButton')}
+            </Button>
+          </div>
         </Container>
-      </div>
-
-      {/* Promotion */}
-      <div className={styles.sustainableContainer}>
-        <Hero
-          image={toOptimizedImage('/banner3.png')}
-          title={'We are Sustainable'}
-          subtitle={
-            'From caring for our land to supporting our people, discover the steps we’re taking to do more for the world around us.'
-          }
-          ctaText={'read more'}
-          maxWidth={'660px'}
-          ctaStyle={styles.ctaCustomButton}
-        />
-      </div>
-
-      {/* Social Media */}
-      <div className={styles.socialContainer}>
-        <Title
-          name={'Styled by You'}
-          subtitle={'Tag @sydney to be featured.'}
-        />
-        <div className={styles.socialContentGrid}>
-          <img src={toOptimizedImage(`/social/socialMedia1.png`)} alt={'social media 1'} />
-          <img src={toOptimizedImage(`/social/socialMedia2.png`)} alt={'social media 2'} />
-          <img src={toOptimizedImage(`/social/socialMedia3.png`)} alt={'social media 3'} />
-          <img src={toOptimizedImage(`/social/socialMedia4.png`)} alt={'social media 4'} />
-        </div>
-      </div>
-      <AttributeGrid />
+      </section>
     </Layout>
   );
 };

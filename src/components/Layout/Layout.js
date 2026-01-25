@@ -13,7 +13,10 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
   return (
     <>
       <Helmet>
-        {/* Add any sitewide scripts here */}
+        <title>Sofia i David - Ens casem! | 17 de Juny 2025</title>
+        <meta name="description" content="Ens casem! Us convidem a celebrar el nostre casament el 17 de juny de 2025." />
+        <meta property="og:title" content="Sofia i David - Ens casem!" />
+        <meta property="og:description" content="Us convidem a celebrar el nostre casament el 17 de juny de 2025." />
         <link
           rel="stylesheet"
           type="text/css"
@@ -22,7 +25,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
+          charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>

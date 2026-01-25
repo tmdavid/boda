@@ -1,12 +1,20 @@
 .root {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.brandText {
+  font-family: var(--standard-header);
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--standard-black);
+  letter-spacing: 1px;
 }
 
 @media (max-width: 800px) {
-    .root svg {
-        width: 90px;
-        height: 16.67px;
-    }
+  .brandText {
+    font-size: 18px;
+  }
 }

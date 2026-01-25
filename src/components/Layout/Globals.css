@@ -50,6 +50,13 @@
   --sale: #902F15;
   --error: #9A3515;
 
+  /* Wedding color palette */
+  --wedding-sage: #D4E4D2;
+  --wedding-coral: #E8998D;
+  --wedding-cream: #FDF8F5;
+  --wedding-peach: #FAF0EB;
+  --wedding-text: #5C5C5C;
+
   /* not sure if we are to maintain existing color palletes. better if we keep it lightweight? */
   /* --standard-grey-darker: #393939;
   --standard-grey-light: #e3e3e3;

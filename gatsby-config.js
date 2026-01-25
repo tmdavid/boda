@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Sydney Ecommerce Theme`,
-    siteUrl: `https://jamm.matter.design`,
+    title: `Sofia i David - Ens casem!`,
+    siteUrl: `https://sofiaydavid.com`,
   },
   plugins: [],
 };
