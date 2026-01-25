@@ -6,7 +6,12 @@
       "Bash(npm run clean:*)",
       "Bash(npm run build:*)",
       "Bash(npx gatsby clean)",
-      "Bash(npx gatsby build)"
+      "Bash(npx gatsby build)",
+      "Bash(dir:*)",
+      "Bash(npm start)",
+      "Bash(timeout /t 20 /nobreak)",
+      "Bash(copy \"C:\\\\Users\\\\torre\\\\Desktop\\\\boda\\\\inspiration\\\\main_image.jpg\" \"C:\\\\Users\\\\torre\\\\Desktop\\\\boda\\\\static\\\\main_image.jpg\")",
+      "Bash(cmd /c copy:*)"
     ]
   }
 }

@@ -14,7 +14,7 @@ const IndexPage = () => {
   const t = (key) => getTranslation(language, key);
   const [openFaq, setOpenFaq] = useState(null);
 
-  const googleFormsUrl = 'https://forms.gle/vTdj9iuPoZDH8rnTA';
+  const rsvpUrl = t('rsvpUrl');
 
   const faqItems = [
     { id: 'dressCode', title: t('faqDressCodeTitle'), answer: t('faqDressCodeText') },
@@ -60,6 +60,12 @@ const IndexPage = () => {
           <img src="/fotos/humboldt.jpg" alt="Sofia i David" />
           <img src="/fotos/washingtonss.jpg" alt="Sofia i David" />
           <img src="/fotos/freeeed.jpg" alt="Sofia i David" />
+          <img src="/fotos/anell.jpg" alt="Sofia i David" />
+          <img src="/fotos/colombia.jpg" alt="Sofia i David" />
+          <img src="/fotos/guapos.jpg" alt="Sofia i David" />
+          <img src="/fotos/guaposcolombians.jpg" alt="Sofia i David" />
+          <img src="/fotos/ovelles.jpg" alt="Sofia i David" />
+          <img src="/fotos/vi.jpg" alt="Sofia i David" />
         </div>
       </section>
 
@@ -99,7 +105,7 @@ const IndexPage = () => {
             <Button
               className={styles.rsvpCtaButton}
               level={'primary'}
-              onClick={() => window.open(googleFormsUrl, '_blank')}
+              onClick={() => window.open(rsvpUrl, '_blank')}
             >
               RSVP
             </Button>

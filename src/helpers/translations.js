@@ -5,6 +5,7 @@ const translations = {
     navWhenWhere: "Quan/On",
     navFaq: "FAQ",
     navConfirm: "Confirmar",
+    rsvpUrl: "https://form.typeform.com/to/ca6aPcg3",
 
     // Hero Section
     tagline: "Ens casem!",
@@ -68,6 +69,7 @@ const translations = {
     navWhenWhere: "Cuándo/Dónde",
     navFaq: "FAQ",
     navConfirm: "Confirmar",
+    rsvpUrl: "https://form.typeform.com/to/JRUP45IW",
 
     // Hero Section
     tagline: "¡Nos casamos!",

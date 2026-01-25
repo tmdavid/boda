@@ -14,7 +14,6 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const t = (key) => getTranslation(language, key);
-  const googleFormsUrl = 'https://forms.gle/vTdj9iuPoZDH8rnTA';
 
   useEffect(() => {
     const onScroll = () => {
@@ -77,7 +76,7 @@ const Header = () => {
               className={styles.headerRsvpButton}
               level={'primary'}
               size={'small'}
-              onClick={() => window.open(googleFormsUrl, '_blank')}
+              onClick={() => window.open(t('rsvpUrl'), '_blank')}
             >
               RSVP
             </Button>
