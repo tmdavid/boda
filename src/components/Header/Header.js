@@ -4,6 +4,7 @@ import { useLanguage } from '../../context/LanguageProvider';
 import { getTranslation } from '../../helpers/translations';
 
 import Brand from '../Brand';
+import Button from '../Button';
 import Container from '../Container';
 import Icon from '../Icons/Icon';
 import * as styles from './Header.module.css';
@@ -13,6 +14,7 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const t = (key) => getTranslation(language, key);
+  const googleFormsUrl = 'https://forms.gle/vTdj9iuPoZDH8rnTA';
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,9 +34,9 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: t('when'), sectionId: 'when-where' },
-    { label: t('where'), sectionId: 'when-where' },
-    { label: t('rsvp'), sectionId: 'rsvp' },
+    { label: t('navWhenWhere'), sectionId: 'when-where' },
+    { label: t('navFaq'), sectionId: 'faq' },
+    { label: t('navConfirm'), sectionId: 'rsvp' },
   ];
 
   return (
@@ -69,8 +71,16 @@ const Header = () => {
           {/* Center: Brand */}
           <Brand />
 
-          {/* Right: Language Toggle */}
+          {/* Right: RSVP Button and Language Toggle */}
           <div className={styles.actionContainers}>
+            <Button
+              className={styles.headerRsvpButton}
+              level={'primary'}
+              size={'small'}
+              onClick={() => window.open(googleFormsUrl, '_blank')}
+            >
+              RSVP
+            </Button>
             <div className={styles.languageToggle}>
               <button
                 className={`${styles.langButton} ${language === 'ca' ? styles.activeLang : ''}`}

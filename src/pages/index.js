@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useLanguage } from '../context/LanguageProvider';
 import { getTranslation } from '../helpers/translations';
@@ -12,31 +12,25 @@ import * as styles from './index.module.css';
 const IndexPage = () => {
   const { language } = useLanguage();
   const t = (key) => getTranslation(language, key);
+  const [openFaq, setOpenFaq] = useState(null);
 
   const googleFormsUrl = 'https://forms.gle/vTdj9iuPoZDH8rnTA';
+
+  const faqItems = [
+    { id: 'dressCode', title: t('faqDressCodeTitle'), answer: t('faqDressCodeText') },
+    { id: 'transport', title: t('faqTransportTitle'), answer: t('faqTransportText') },
+    { id: 'children', title: t('faqChildrenTitle'), answer: t('faqChildrenText') },
+    { id: 'gifts', title: t('faqGiftsTitle'), answer: t('faqGiftsText') },
+  ];
+
+  const toggleFaq = (id) => {
+    setOpenFaq(openFaq === id ? null : id);
+  };
 
   return (
     <Layout disablePaddingBottom>
       {/* Section 1: Hero */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <img
-            src="/banner.png"
-            alt="Gran Hotel La Florida illustration"
-            className={styles.heroBanner}
-          />
-          <span className={styles.saveTheDate}>{t('saveTheDate')}</span>
-          <h1 className={styles.heroNames}>{t('names')}</h1>
-          <span className={styles.heroTagline}>{t('tagline')}</span>
-          <Button
-            className={styles.heroCta}
-            level={'primary'}
-            onClick={() => window.open(googleFormsUrl, '_blank')}
-          >
-            {t('ctaButton')}
-          </Button>
-        </div>
-      </section>
+      <section className={styles.heroSection}></section>
 
       {/* Section 2: When & Where */}
       <section id="when-where" className={styles.whenWhereSection}>
@@ -44,14 +38,9 @@ const IndexPage = () => {
           <div className={styles.whenWhereGrid}>
             <div className={styles.whenColumn}>
               <h2 className={styles.sectionTitle}>{t('whenTitle')}</h2>
-              <div className={styles.scheduleItem}>
-                <span className={styles.scheduleLabel}>{t('outdoor')}</span>
-                <span className={styles.scheduleTime}>{t('outdoorTime')}</span>
-              </div>
-              <div className={styles.scheduleItem}>
-                <span className={styles.scheduleLabel}>{t('indoor')}</span>
-                <span className={styles.scheduleTime}>{t('indoorTime')}</span>
-              </div>
+              <span className={styles.weddingDate}>{t('weddingDateFull')}</span>
+              <span className={styles.scheduleTime}>{t('cocktailTime')}</span>
+              <span className={styles.scheduleTime}>{t('partyTime')}</span>
             </div>
             <div className={styles.whereColumn}>
               <h2 className={styles.sectionTitle}>{t('whereTitle')}</h2>
@@ -62,19 +51,8 @@ const IndexPage = () => {
         </Container>
       </section>
 
-      {/* Section 3: Invitation */}
-      <section className={styles.invitationSection}>
-        <Container>
-          <div className={styles.invitationContent}>
-            <span className={styles.invitationSubtitle}>{t('subtitle')}</span>
-            <p className={styles.invitationText}>{t('invitationText')}</p>
-            <span className={styles.dressCode}>{t('dressCode')}</span>
-          </div>
-        </Container>
-      </section>
-
-      {/* Section 4: Photo Gallery */}
-      <section className={styles.gallerySection}>
+      {/* Section 3: Photo Gallery */}
+      <section id="gallery" className={styles.gallerySection}>
         <div className={styles.galleryGrid}>
           <img src="/fotos/cascada.jpg" alt="Sofia i David" />
           <img src="/fotos/islandia.jpg" alt="Sofia i David" />
@@ -85,6 +63,33 @@ const IndexPage = () => {
         </div>
       </section>
 
+      {/* Section 4: FAQ */}
+      <section id="faq" className={styles.faqSection}>
+        <Container>
+          <div className={styles.faqContent}>
+            <h2 className={styles.faqTitle}>{t('faqTitle')}</h2>
+            <div className={styles.faqList}>
+              {faqItems.map((item) => (
+                <div key={item.id} className={styles.faqItem}>
+                  <button
+                    className={styles.faqQuestion}
+                    onClick={() => toggleFaq(item.id)}
+                  >
+                    <h3>{item.title}</h3>
+                    <span className={`${styles.faqIcon} ${openFaq === item.id ? styles.open : ''}`}>
+                      +
+                    </span>
+                  </button>
+                  <div className={`${styles.faqAnswer} ${openFaq === item.id ? styles.open : ''}`}>
+                    <p>{item.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Section 5: RSVP CTA */}
       <section id="rsvp" className={styles.rsvpCtaSection}>
         <Container>
@@ -92,10 +97,11 @@ const IndexPage = () => {
             <h2 className={styles.rsvpCtaTitle}>{t('rsvpTitle')}</h2>
             <p className={styles.rsvpCtaSubtitle}>{t('rsvpSubtitle')}</p>
             <Button
+              className={styles.rsvpCtaButton}
               level={'primary'}
               onClick={() => window.open(googleFormsUrl, '_blank')}
             >
-              {t('rsvpButton')}
+              RSVP
             </Button>
           </div>
         </Container>

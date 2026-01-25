@@ -19,9 +19,6 @@ const Footer = () => {
           <span className={styles.hashtag}>#SofiaIDavid</span>
         </div>
       </Container>
-      <div className={styles.copyright}>
-        <span>{t('madeWith')} &#10084;</span>
-      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 /**
  *
  Font weight references:
@@ -30,6 +31,7 @@
   --standard-header: 'Inria Serif', serif;
   --standard-font: 'Inter', sans-serif;
   --brand-font: 'Yeseva One', cursive;
+  --montserrat-font: 'Montserrat', sans-serif;
   --standard-black: #000000;
   --standard-white: #ffffff;
   --standard-grey: #e2e2e2;
@@ -56,6 +58,7 @@
   --wedding-cream: #FDF8F5;
   --wedding-peach: #FAF0EB;
   --wedding-text: #5C5C5C;
+  --wedding-blue: #051EAA;
 
   /* not sure if we are to maintain existing color palletes. better if we keep it lightweight? */
   /* --standard-grey-darker: #393939;

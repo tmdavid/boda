@@ -31,7 +31,7 @@
 
 .navLink {
   text-transform: uppercase;
-  color: var(--standard-black);
+  color: var(--wedding-blue);
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -43,8 +43,8 @@
 }
 
 .navLink:hover {
-  border-bottom: 2px solid var(--wedding-coral);
-  color: var(--wedding-coral);
+  border-bottom: 2px solid var(--wedding-blue);
+  color: var(--wedding-blue);
 }
 
 .actionContainers {
@@ -52,6 +52,12 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+
+.headerRsvpButton {
+  margin-right: 16px;
+  background-color: var(--wedding-blue) !important;
+  border-color: var(--wedding-blue) !important;
 }
 
 .languageToggle {
@@ -67,22 +73,24 @@
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
-  color: var(--wedding-text);
+  color: var(--wedding-blue);
   padding: 4px 8px;
   transition: all 0.3s ease-in-out;
+  opacity: 0.6;
 }
 
 .langButton:hover {
-  color: var(--wedding-coral);
+  color: var(--wedding-blue);
 }
 
 .langButton.activeLang {
-  color: var(--wedding-coral);
+  color: var(--wedding-blue);
   font-weight: 600;
+  opacity: 1;
 }
 
 .langDivider {
-  color: var(--wedding-text);
+  color: var(--wedding-blue);
   font-size: 12px;
 }
 
@@ -124,7 +132,7 @@
 
 .mobileNavLink {
   text-transform: uppercase;
-  color: var(--standard-black);
+  color: var(--wedding-blue);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -133,7 +141,7 @@
 }
 
 .mobileNavLink:hover {
-  color: var(--wedding-coral);
+  color: var(--wedding-blue);
 }
 
 @media (max-width: 800px) {

@@ -2,9 +2,9 @@ const translations = {
   ca: {
     // Header / Navigation
     names: "Sofia i David",
-    when: "Quan",
-    where: "On",
-    rsvp: "Confirmar",
+    navWhenWhere: "Quan/On",
+    navFaq: "FAQ",
+    navConfirm: "Confirmar",
 
     // Hero Section
     tagline: "Ens casem!",
@@ -20,17 +20,27 @@ const translations = {
     // When & Where Section
     whenTitle: "Quan",
     whereTitle: "On",
-    outdoor: "A l'aire lliure",
-    indoor: "Interior",
-    outdoorTime: "19:00 - 23:00",
-    indoorTime: "23:00 - 02:00",
+    weddingDateFull: "Dissabte, 19 de setembre de 2026",
+    cocktailTime: "Còctel: 7:00 p.m.",
+    partyTime: "Festa: 11:00 p.m.",
     venueName: "Gran Hotel La Florida",
-    venueAddress: "Ctra. de Vallvidrera al Tibidabo, 83-93, 08035 Barcelona",
+    venueAddress: "Ctra. de Vallvidrera al Tibidabo, 83, 93, Barcelona",
     moreDetails: "Tots els detalls +",
 
+    // FAQ Section
+    faqTitle: "Detalls del dia",
+    faqDressCodeTitle: "Codi de vestimenta",
+    faqDressCodeText: "La celebració comença a les 7 pm, per la qual cosa demanem etiqueta formal de nit. Els homes amb vestit fosc i les dones amb vestit llarg o còctel elegant.",
+    faqTransportTitle: "Transport",
+    faqTransportText: "No proporcionarem transport, però hi haurà servei de taxi disponible cap a i des de l'hotel. També disposem de places d'aparcament limitades. Si prefereixes venir amb cotxe, avisa'ns per reservar-te'n una!",
+    faqChildrenTitle: "Nens",
+    faqChildrenText: "Ens encanten els nens, però volem que tots puguem gaudir plenament d'aquest dia, per la qual cosa aquesta celebració és només per a adults.",
+    faqGiftsTitle: "Regals",
+    faqGiftsText: "El millor regal és la vostra presència! Si voleu fer-nos un obsequi, agrairíem una contribució al nostre fons de lluna de mel.",
+
     // RSVP Section
-    rsvpTitle: "Esperem que ens acompanyis",
-    rsvpSubtitle: "Si us plau, confirmeu la vostra assistència abans del 15 de maig",
+    rsvpTitle: "Confirmar assistència",
+    rsvpSubtitle: "Ens encantaria comptar amb tu. Si us plau, fes-nos-ho saber abans del 15 de juny de 2026.",
     rsvpButton: "Confirmar assistència",
 
     // RSVP Form
@@ -55,9 +65,9 @@ const translations = {
   es: {
     // Header / Navigation
     names: "Sofia y David",
-    when: "Cuándo",
-    where: "Dónde",
-    rsvp: "Confirmar",
+    navWhenWhere: "Cuándo/Dónde",
+    navFaq: "FAQ",
+    navConfirm: "Confirmar",
 
     // Hero Section
     tagline: "¡Nos casamos!",
@@ -73,17 +83,27 @@ const translations = {
     // When & Where Section
     whenTitle: "Cuándo",
     whereTitle: "Dónde",
-    outdoor: "Al aire libre",
-    indoor: "Interior",
-    outdoorTime: "19:00 - 23:00",
-    indoorTime: "23:00 - 02:00",
+    weddingDateFull: "Sábado, 19 de septiembre de 2026",
+    cocktailTime: "Cóctel: 7:00 p.m.",
+    partyTime: "Fiesta: 11:00 p.m.",
     venueName: "Gran Hotel La Florida",
-    venueAddress: "Ctra. de Vallvidrera al Tibidabo, 83-93, 08035 Barcelona",
+    venueAddress: "Ctra. de Vallvidrera al Tibidabo, 83, 93, Barcelona",
     moreDetails: "Todos los detalles +",
 
+    // FAQ Section
+    faqTitle: "Detalles del día",
+    faqDressCodeTitle: "Código de vestimenta",
+    faqDressCodeText: "La celebración comienza a las 7 pm, por lo que pedimos etiqueta formal de noche. Los hombres en traje oscuro y las mujeres en vestido largo o cóctel elegante.",
+    faqTransportTitle: "Transporte",
+    faqTransportText: "No proporcionaremos transporte, pero habrá servicio de taxi disponible hacia y desde el hotel. También contamos con plazas de parking limitadas. Si prefieres venir en coche, avísanos para reservarte una!",
+    faqChildrenTitle: "Niños",
+    faqChildrenText: "Nos encantan los niños, pero queremos que todos podamos disfrutar plenamente de este día, por lo que esta celebración es solo para adultos.",
+    faqGiftsTitle: "Regalos",
+    faqGiftsText: "¡El mejor regalo es vuestra presencia! Si queréis hacernos un obsequio, agradeceríamos una contribución a nuestro fondo de luna de miel.",
+
     // RSVP Section
-    rsvpTitle: "Esperamos que nos acompañes",
-    rsvpSubtitle: "Por favor, confirma tu asistencia antes del 15 de mayo",
+    rsvpTitle: "Confirmar asistencia",
+    rsvpSubtitle: "Nos encantaría contar contigo. Por favor, háznoslo saber antes del 15 de junio de 2026.",
     rsvpButton: "Confirmar asistencia",
 
     // RSVP Form
