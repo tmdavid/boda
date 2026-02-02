@@ -14,7 +14,7 @@
 
 .names {
   font-family: var(--standard-header);
-  font-size: 42px;
+  font-size: 24px;
   font-style: italic;
   color: var(--wedding-blue);
   letter-spacing: 1px;
@@ -52,7 +52,7 @@
   }
 
   .names {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .content {

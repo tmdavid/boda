@@ -17,6 +17,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
         <meta name="description" content="Ens casem! Us convidem a celebrar el nostre casament el 17 de juny de 2025." />
         <meta property="og:title" content="Sofia i David - Ens casem!" />
         <meta property="og:description" content="Us convidem a celebrar el nostre casament el 17 de juny de 2025." />
+        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
         <link
           rel="stylesheet"
           type="text/css"

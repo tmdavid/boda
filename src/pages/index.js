@@ -37,12 +37,14 @@ const IndexPage = () => {
         <Container>
           <div className={styles.whenWhereGrid}>
             <div className={styles.whenColumn}>
+              <img src="/when.png" alt="When" className={styles.columnImage} />
               <h2 className={styles.sectionTitle}>{t('whenTitle')}</h2>
               <span className={styles.weddingDate}>{t('weddingDateFull')}</span>
               <span className={styles.scheduleTime}>{t('cocktailTime')}</span>
               <span className={styles.scheduleTime}>{t('partyTime')}</span>
             </div>
             <div className={styles.whereColumn}>
+              <img src="/where.png" alt="Where" className={styles.columnImage} />
               <h2 className={styles.sectionTitle}>{t('whereTitle')}</h2>
               <span className={styles.venueName}>{t('venueName')}</span>
               <span className={styles.venueAddress}>{t('venueAddress')}</span>

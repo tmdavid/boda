@@ -12,7 +12,7 @@
 /* When & Where Section */
 .whenWhereSection {
   background-color: var(--wedding-blue);
-  padding: 100px 24px;
+  padding: 60px 24px;
 }
 
 .whenWhereGrid {
@@ -30,6 +30,15 @@
   align-items: center;
   text-align: center;
   gap: 12px;
+}
+
+.columnImage {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  object-fit: cover;
 }
 
 .sectionTitle {
@@ -227,7 +236,7 @@
   }
 
   .whenWhereSection {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
 
   .whenWhereGrid {
@@ -255,6 +264,11 @@
     font-size: 16px;
   }
 
+  .columnImage {
+    max-width: 170px;
+    margin-bottom: 20px;
+  }
+
   .faqTitle {
     font-size: 26px;
   }
@@ -277,10 +291,17 @@
     aspect-ratio: 9 / 16;
   }
 
-  .whenWhereSection,
+  .whenWhereSection {
+    padding: 28px 16px;
+  }
+
   .faqSection,
   .rsvpCtaSection {
     padding: 50px 16px;
+  }
+
+  .whenWhereGrid {
+    gap: 32px;
   }
 
   .weddingDate,
@@ -293,6 +314,11 @@
     font-size: 14px;
   }
 
+  .columnImage {
+    max-width: 140px;
+    margin-bottom: 12px;
+  }
+
   .galleryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -301,11 +327,7 @@
     height: 180px;
   }
 
-  .rsvpCtaTitle {
-    font-size: 22px;
-  }
-
   .rsvpCtaSubtitle {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
