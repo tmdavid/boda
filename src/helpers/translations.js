@@ -62,6 +62,7 @@ const translations = {
     // Footer
     footerText: "Ens veiem el 19 de setembre!",
     madeWith: "Fet amb amor",
+    illustrationsBy: "Il·lustracions fetes per",
   },
   es: {
     // Header / Navigation
@@ -126,6 +127,7 @@ const translations = {
     // Footer
     footerText: "¡Nos vemos el 19 de septiembre!",
     madeWith: "Hecho con amor",
+    illustrationsBy: "Ilustraciones hechas por",
   }
 };
 

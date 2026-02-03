@@ -34,6 +34,26 @@
   letter-spacing: 1px;
 }
 
+.illustrationCredit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px;
+  background-color: var(--wedding-blue);
+}
+
+.illustrationCredit span {
+  font-family: var(--standard-font);
+  font-size: 11px;
+  color: var(--standard-white);
+}
+
+.illustrationLogo {
+  height: 20px;
+  width: auto;
+}
+
 .copyright {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 16px;

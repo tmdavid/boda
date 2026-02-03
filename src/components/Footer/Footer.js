@@ -19,6 +19,12 @@ const Footer = () => {
           <span className={styles.hashtag}>#SofiaIDavid</span>
         </div>
       </Container>
+      <div className={styles.illustrationCredit}>
+        <span>{t('illustrationsBy')}</span>
+        <a href="https://www.instagram.com/vinoandtype" target="_blank" rel="noopener noreferrer">
+          <img src="/blancolargo.png" alt="Vino and Type" className={styles.illustrationLogo} />
+        </a>
+      </div>
     </div>
   );
 };
